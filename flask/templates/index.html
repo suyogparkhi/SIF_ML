@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>File Upload and Delete</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="logo" src="https://static.thenounproject.com/png/5209-200.png">
+            ashIt! 
+            <span>Login</span>
+        </div>
+        <div class="content">    
+            <h2>Upload a File</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data" >
+                <input class="file" type="file" name="file" multiple>
+                <input class="submit" type="submit" value="Upload">
+            </form>
+            <form action="{{ url_for('delete_files') }}" method="post">
+                <div class="table">
+                    <table>
+                        <tr>
+                            <td class="Select">Select</td>
+                            <td class="Filename">File Name</td>
+                            <td class="Filepath">File Path</td>
+                            <td class="delete">Delete</td>
+                        </tr>
+                        {% for file in files %}
+                            <tr>
+                                <td><input type="checkbox" name="selected_files" value="{{ file }}"></td>
+                                <td>{{ file }}</td>
+                                <td>{{ file_path }}</td>
+                                <td><a style="text-decoration: none;" href="{{ url_for('delete_file', filename=file) }}"><img src="https://cdn.iconscout.com/icon/free/png-256/free-bin-2782756-2316163.png"></a></td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    <input type="submit" value="Delete Selected">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2023 Your Company
+    </div>
+</body>
+</html>

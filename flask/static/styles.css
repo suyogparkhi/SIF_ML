@@ -1,0 +1,96 @@
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    flex: 1;
+}
+
+.header {
+    /* margin-top: 10px; */
+    background-color: #fff;
+    color:#000;
+    flex-direction: row;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 25px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    /* text-align: center; */
+    box-shadow: 0px 1px 10px #000;
+    
+}
+img.logo{
+    float: left;
+    height: 40px;
+    width: 40px;
+    margin: -5px;
+}
+.file{
+    color:#444;
+    background-color: #eee;
+
+}
+img{
+    height: 25px;
+    width: 25px;
+    float: left;
+}
+img:hover{
+    height: 30px;
+    width: 30px;
+}
+.content{
+    margin: 40px;
+    text-align: center;
+}
+table{
+    margin-top: 20px;
+    /* margin:50px; */
+    min-width: 100%;
+    background-color: #ffd8ae;
+    justify-content: center;
+    table-layout: fixed;
+}
+.Select,.delete{
+    width: 40px;
+    text-align: center;
+    font-weight: 700;
+    background-color: #470d0d;
+    color: #ffd8ae;
+}
+.Filename{
+    text-align: center;
+    font-weight: 700;
+    background-color:#470d0d;
+    color: #ffd8ae;
+}
+.Filepath{
+    text-align: center;
+    font-weight: 700;
+    width: 70%;
+    background-color: #470d0d;
+    color: #ffd8ae;
+}
+input{
+    background-color: #470d0d;
+    color: #ffd8ae;
+}
+tr,td{
+    text-align: left;
+    margin: 15px;
+    padding: 10px;
+    box-shadow: 0.1px  0.1px 2px;
+}
+.footer {
+    background-color: #eee;
+    padding: 10px;
+    margin-top: auto;
+    text-align: center;
+
+}
